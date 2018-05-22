@@ -1,41 +1,20 @@
 import os
 import speech_recognition as sr
 
-with open("text-recognition-67c11381cd20.json") as f:
-    GOOGLE_CLOUD_SPEECH_CREDENTIALS = f.read()
 
-r = sr.Recognizer()
+def rec_to_text():
+    with open("text-recognition-67c11381cd20.json") as f:
+        GOOGLE_CLOUD_SPEECH_CREDENTIALS = f.read()
 
-name = 'file.wav'
-# Load audio file
-with sr.AudioFile(name) as source:
-    audio = r.record(source)
-# Transcribe audio file
-text = r.recognize_google_cloud(audio, credentials_json=GOOGLE_CLOUD_SPEECH_CREDENTIALS)
-print(text)
-with open("transcript.txt", "w") as f:
-    f.write(text)
-# return {
-#     "text": text
-# }
+    r = sr.Recognizer()
 
-# all_text = pool.map(transcribe, enumerate(files))
-# pool.close()
-# pool.join()
-
-# transcript = ""
-# for t in sorted(all_text, key=lambda x: x['idx']):
-#     total_seconds = t['idx'] * 30
-#     # Cool shortcut from:
-#     # https://stackoverflow.com/questions/775049/python-time-seconds-to-hms
-#     # to get hours, minutes and seconds
-#     m, s = divmod(total_seconds, 60)
-#     h, m = divmod(m, 60)
-
-#     # Format time as h:m:s - 30 seconds of text
-#     transcript = transcript + "{:0>2d}:{:0>2d}:{:0>2d} {}\n".format(h, m, s, t['text'])
-
-# print(transcript)
-
-# with open("transcript.txt", "w") as f:
-#     f.write(transcript)
+    name = 'file.wav'
+    # Load audio file
+    with sr.AudioFile(name) as source:
+        audio = r.record(source)
+    # Transcribe audio file
+    text = r.recognize_google_cloud(audio, credentials_json=GOOGLE_CLOUD_SPEECH_CREDENTIALS)
+    print(text)
+    with open("transcript.txt", "w") as f:
+        f.write(text)
+    return text
