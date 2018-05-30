@@ -1,4 +1,4 @@
-# askme
+# Tony virtual assistant
 
 **Authors**:
 - [Andrii Glukhyi](https://github.com/andriiglukhyi)
