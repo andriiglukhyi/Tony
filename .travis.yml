@@ -6,8 +6,8 @@ install:
   - pip install -r requirements.txt
   - pip install coveralls
 
-# script:
-#   - python askme/manage.py migrate
+script:
+  # - python askme/manage.py migrate
 #   - coverage run askme/manage.py test askme
 
 after_success:
