@@ -44,9 +44,7 @@ def find(query):
     if query == '':
         speech_output = "Can you repeat your question?"
         return speech_output
-    # print(query)
     arr = query.split(' ')
-    # print(arr)
 
     for item in range(len(arr)):
         try:
