@@ -44,8 +44,8 @@ gTTS-token==1.1.1
 httplib2==0.11.3
 idna==2.6
 oauth2client==3.0.0
-ply==3.8
 proto-google-cloud-datastore-v1==0.90.4
+ply==3.8
 proto-google-cloud-error-reporting-v1beta1==0.15.3
 proto-google-cloud-logging-v2==0.91.3
 protobuf==3.5.2.post1
