@@ -5,6 +5,11 @@ python:
 install:
   - pip install -r requirements.txt
   - pip install coveralls
+  - apt-get install libasound2 alsa-utils alsa-oss
+
+# script:
+#   # - python askme/manage.py migrate
+# #   - coverage run askme/manage.py test askme
 
 after_success:
   - coveralls

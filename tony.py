@@ -6,7 +6,7 @@ import os
 import pygame
 import time
 
-rec()
+rec('record.wav')
 question = rec_to_text()
 answer = find(question)
 tts = gTTS(text=answer, lang='en')
