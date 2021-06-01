@@ -63,5 +63,5 @@ simpleaudio==1.0.2
 six==1.11.0
 SpeechRecognition==3.6.1
 uritemplate==3.0.0
-urllib3==1.22
+urllib3==1.26.5
 Wave==0.0.2
